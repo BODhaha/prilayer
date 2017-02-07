@@ -1,0 +1,100 @@
+@charset "utf-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  color: #333333;
+  font-family: "微软雅黑";
+}
+h3 {
+  margin: 10px 0px;
+}
+h1 {
+  text-align: center;
+  background-color: rgba(81, 189, 189, 0.8);
+  padding: 10px;
+  color: #ffffff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+.left-side {
+  position: fixed;
+  width: 20%;
+  top: 62px;
+}
+.right-side {
+  width: 80%;
+  position: absolute;
+  left: 20%;
+  top: 62px;
+  overflow: auto;
+  bottom: 0px;
+
+}
+.html-demo {
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+.type-block {
+  width: 100%;
+  padding: 30px;
+  margin: 10px 0px;
+}
+#usage {
+  background-color: rgba(100, 189, 133, 0.5);
+}
+#msg {
+  background-color: rgba(215, 230, 173, 0.5);
+}
+#custom {
+  background-color: rgba(255, 247, 214, 0.5);
+}
+#tips {
+  background-color: rgba(254, 255, 239, 0.5);
+}
+#importantMsg {
+  background-color: rgba(255, 230, 223, 0.5);
+}
+
+.att-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #666666;
+  margin: 20px 0px;
+}
+.att-table td,
+.att-table th {
+  border: 2px solid #666666;
+}
+.left-menu {
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+}
+.left-menu li {
+  margin: 10px 0px;
+}
+.left-menu li a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 8px;
+  color: #666666;
+  font-size: 16px;
+}
+.usage-li a {
+  background-color: rgba(100, 189, 133, 0.5);
+}
+.msg-li a {
+  background-color: rgba(215, 230, 173, 0.5);
+}
+.custom-li a {
+  background-color: rgba(255, 247, 214, 0.5);
+}
+.tips-li a {
+  background-color: rgba(254, 255, 239, 0.5);
+}
+.importantMsg-li a {
+  background-color: rgba(255, 230, 223, 0.5);
+}

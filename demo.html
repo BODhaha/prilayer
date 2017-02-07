@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <link href="demo.css" type="text/css" rel="stylesheet" />
+    <script src="./jquery-1.12.3.js"></script>
+  </head>
+  <body>
+    <h1>prilayer使用教程(持续更新中)</h1>
+    <div class="left-side">
+      <ul class="left-menu">
+        <li class="usage-li"><a href="#usage">usage</a></li>
+        <li class="msg-li"><a href="#msg">msg</a></li>
+        <li class="custom-li"><a href="#custom">custom</a></li>
+        <li class="tips-li"><a href="#tips">tips</a></li>
+        <li class="importantMsg-li"><a href="#importantMsg">importantMsg</a></li>
+      </ul>
+    </div>
+    <div class="right-side">
+      <div name="usage" id="usage" class="type-block">
+        <h2>usage</h2>
+        按顺序引入以下文件
+        <textarea disabled="true" class="html-demo" rows="4">
+          <script src="./jquery-1.12.3.js"></script>
+          <script src="./layer/layer.js"></script>
+          <script src="./layer-based.js"></script>
+        </textarea>
+      </div>
+
+      <div name="msg" id="msg" class="type-block">
+        <h2>msg</h2>
+        <h3>方式一：添加class和data来调用</h3>
+        <span class="prilayer" data-layertype="msg" data-content="成功了！" data-type="success">success</span>
+        <textarea disabled="true" class="html-demo">
+          <span class="prilayer" data-layertype="msg" data-content="成功了！" data-type="success">success</span>
+        </textarea>
+        <span class="prilayer" data-layertype="msg" data-content="错误" data-type="error">error</span>
+        <textarea disabled="true" class="html-demo">
+          <span class="prilayer" data-layertype="msg" data-content="错误" data-type="error">error</span>
+        </textarea>
+        <span class="prilayer" data-layertype="msg" data-content="警告" data-type="warn">warn</span>
+        <textarea disabled="true" class="html-demo">
+          <span class="prilayer" data-layertype="msg" data-content="警告" data-type="warn">warn</span>
+        </textarea>
+        <span class="prilayer" data-layertype="msg" data-content="提示" data-type="prompt">prompt</span>
+        <textarea disabled="true" class="html-demo">
+          <span class="prilayer" data-layertype="msg" data-content="提示" data-type="prompt">prompt</span>
+        </textarea>
+        <span class="prilayer" data-layertype="msg" data-content="加载中" data-type="loading">loading</span>
+        <textarea disabled="true" class="html-demo">
+          <span class="prilayer" data-layertype="msg" data-content="加载中" data-type="loading">loading</span>
+        </textarea>
+
+        <h3>方式二：通过js调用</h3>
+        <span class="msg-trigger">loading鼠标放上来试试</span>
+        <script>
+        $(".msg-trigger").on("mouseover", function () {
+          prilayer.msg({"content": "正在加载中...","type": "loading"});
+        })
+        </script>
+        <textarea disabled="true" class="html-demo" rows="6">
+          <script>
+          prilayer.msg({"content": "正在加载中...",
+             "type": "loading"//提示 prompt、成功 success、警告warn、错误error、加载中 loading
+             //"time": 2000 默认是2s
+            });
+          </script>
+        </textarea>
+
+        <span class="msg-trigger">success鼠标放上来试试</span>
+        <script>
+        $(".msg-trigger").on("mouseover", function () {
+          prilayer.msg({"content": "操作成功！","type": "success"});
+        })
+        </script>
+        <textarea disabled="true" class="html-demo" rows="6">
+          <script>
+          prilayer.msg({"content": "操作成功！",
+             "type": "success"//提示 prompt、成功 success、警告warn、错误error、加载中 loading
+             //"time": 2000 默认是2s
+            });
+          </script>
+        </textarea>
+
+        <span class="msg-trigger">warn鼠标放上来试试</span>
+        <script>
+        $(".msg-trigger").on("mouseover", function () {
+          prilayer.msg({"content": "警告！","type": "warn"});
+        })
+        </script>
+        <textarea disabled="true" class="html-demo" rows="6">
+          <script>
+          prilayer.msg({"content": "警告！",
+             "type": "warn"//提示 prompt、成功 success、警告warn、错误error、加载中 loading
+             //"time": 2000 默认是2s
+            });
+          </script>
+        </textarea>
+
+        <span class="msg-trigger">loading鼠标放上来试试</span>
+        <script>
+        $(".msg-trigger").on("mouseover", function () {
+          prilayer.msg({"content": "这是一个小提示！","type": "prompt"});
+        })
+        </script>
+        <textarea disabled="true" class="html-demo" rows="6">
+          <script>
+          prilayer.msg({"content": "这是一个小提示！",
+             "type": "prompt"//提示 prompt、成功 success、警告warn、错误error、加载中 loading
+             //"time": 2000 默认是2s
+            });
+          </script>
+        </textarea>
+      </div>
+      <div name="custom" id="custom" class="type-block">
+        <h2>custom</h2>
+        <h3>方式一：</h3>
+        <script id="custom-demo1" type="text/template">
+          <p>第1行飘过~~~~~~~~~</p>
+          <p>第2行飘过~~~~~~~~~</p>
+          <p>第3行飘过~~~~~~~~~</p>
+          <p>第4行飘过~~~~~~~~~</p>
+          <p>第5行飘过~~~~~~~~~</p>
+        </script>
+        <span class="prilayer" data-layertype="custom" data-content="#custom-demo1" data-title="开心开心吖！">点我啊</span>
+        <textarea disabled="true" class="html-demo" rows="10">
+          <script id="custom-demo1" type="text/template">
+            <p>第1行飘过~~~~~~~~~</p>
+            <p>第2行飘过~~~~~~~~~</p>
+            <p>第3行飘过~~~~~~~~~</p>
+            <p>第4行飘过~~~~~~~~~</p>
+            <p>第5行飘过~~~~~~~~~</p>
+          </script>
+          <span class="prilayer" data-layertype="custom" data-content="#custom-demo1" data-title="开心开心吖！">点我啊</span>
+        </textarea>
+        <table class="att-table">
+          <thead>
+            <tr>
+              <th>属性</th>
+              <th>默认值</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>data-layertype</td>
+              <td>custom 字符串</td>
+              <td>指定弹窗是custom自定义类型</td>
+            </tr>
+            <tr>
+              <td>data-move</td>
+              <td>false 布尔类型</td>
+              <td>控制弹窗是否可拖动</td>
+            </tr>
+            <tr>
+              <td>data-title</td>
+              <td>浪里个浪 字符串</td>
+              <td>自定义弹窗的标题</td>
+            </tr>
+            <tr>
+              <td>data-shade-close</td>
+              <td>true 布尔类型</td>
+              <td>点击遮罩的半透明阴影关闭弹窗</td>
+            </tr>
+            <tr>
+              <td>data-shift</td>
+              <td>1 数值</td>
+              <td>弹窗出现的动画效果</td>
+            </tr>
+            <tr>
+              <td>data-width</td>
+              <td>auto 字符串</td>
+              <td>弹窗的宽度 比如："500px"或是“50%”</td>
+            </tr>
+            <tr>
+              <td>data-height</td>
+              <td>auto 字符串</td>
+              <td>弹窗的高度 比如："500px"</td>
+            </tr>
+            <tr>
+              <td>data-min-width</td>
+              <td>"560px" 字符串</td>
+              <td>弹窗的最小宽度</td>
+            </tr>
+            <tr>
+              <td>data-content</td>
+              <td>字符串或选择器</td>
+              <td>弹窗的内容</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>方式二：js调用</h3>
+        <span class="custom-demo2">点我啊</span>
+        <script>
+        $(".custom-demo2").on("click", function () {
+          prilayer.custom({
+            content: $("#custom-demo1").html(),
+            title: "js调用"
+          })
+        })
+        </script>
+        <textarea disabled="true" class="html-demo" rows="10">
+          <span class="custom-demo2">点我啊</span>
+          <script>
+          $(".custom-demo2").on("click", function () {
+            prilayer.custom({
+              content: $("#custom-demo1").html(),
+              title: "js调用"
+            })
+          })
+          </script>
+        </textarea>
+        <table class="att-table">
+          <thead>
+            <tr>
+              <th>属性</th>
+              <th>默认值</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>move</td>
+              <td>false 布尔类型</td>
+              <td>控制弹窗是否可拖动</td>
+            </tr>
+            <tr>
+              <td>title</td>
+              <td>浪里个浪 字符串</td>
+              <td>自定义弹窗的标题</td>
+            </tr>
+            <tr>
+              <td>shadeClose</td>
+              <td>true 布尔类型</td>
+              <td>点击遮罩的半透明阴影关闭弹窗</td>
+            </tr>
+            <tr>
+              <td>shift</td>
+              <td>1 数值</td>
+              <td>弹窗出现的动画效果</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>auto 字符串</td>
+              <td>弹窗的宽度 比如："500px"或是“50%”</td>
+            </tr>
+            <tr>
+              <td>height</td>
+              <td>auto 字符串</td>
+              <td>弹窗的高度 比如："500px"</td>
+            </tr>
+            <tr>
+              <td>minWidth</td>
+              <td>"560px" 字符串</td>
+              <td>弹窗的最小宽度</td>
+            </tr>
+            <tr>
+              <td>content</td>
+              <td>字符串或选择器</td>
+              <td>弹窗的内容</td>
+            </tr>
+            <tr>
+              <td>
+                success
+              </td>
+              <td>
+                function(layero, index){
+            	    console.log(layero, index);
+            	  }
+              </td>
+              <td>
+                custom自定义弹窗成功的回调函数
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div name="tips" id="tips" class="type-block">
+        <h2>tips</h2>
+        <h3>方式一：</h3>
+        <span class="prilayer" data-layertype="tips" data-tip="小提示" data-trigger="click" data-time="0" data-tip-color="#f00">点我啊</span>
+        <textarea disabled="true" class="html-demo" rows="3">
+          <span class="prilayer" data-layertype="tips" data-tip="小提示" data-trigger="click" data-time="0" data-tip-color="#f00">点我啊</span>
+        </textarea>
+        <span class="prilayer" data-layertype="tips" data-tip="小提示" data-time="0">鼠标放上</span>
+        <textarea disabled="true" class="html-demo" rows="3">
+          <span class="prilayer" data-layertype="tips" data-tip="小提示" data-time="0">鼠标放上</span>
+        </textarea>
+        <table class="att-table">
+          <thead>
+            <tr>
+              <th>属性</th>
+              <th>默认值</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>data-tip</td>
+              <td>字符串</td>
+              <td>提示内容</td>
+            </tr>
+            <tr>
+              <td>data-direction</td>
+              <td>1 数值类型</td>
+              <td>支持上右下左四个方向，通过1-4进行方向设定。如tips: 3则表示在元素的下面出现。有时你还可能会定义一些颜色，</td>
+            </tr>
+            <tr>
+              <td>data-tipColor</td>
+              <td>默认是#f90 字符串类型</td>
+              <td>tip的背景色</td>
+            </tr>
+            <tr>
+              <td>data-time</td>
+              <td>2000 数值类型</td>
+              <td>tip出现时间 设置成0，则不消失</td>
+            </tr>
+            <tr>
+              <td>data-trigger</td>
+              <td>hover 默认是鼠标放上触发 字符串类型</td>
+              <td>hover/click两种触发方式可选</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div name="importantMsg" id="importantMsg" class="type-block">
+        <h2>importantMsg</h2>
+        <h3>方式一：</h3>
+        <span class="prilayer" data-layertype="importantMsg" data-important-msg-type="1" data-important-msg="大标题啦啦啦" data-important-submsg="副标题O(∩_∩)O哈哈哈~">点我啊</span>
+        <textarea disabled="true" class="html-demo" rows="3">
+          <span class="prilayer" data-layertype="importantMsg" data-important-msg-type="1" data-important-msg="大标题啦啦啦" data-important-submsg="副标题O(∩_∩)O哈哈哈~">点我啊</span>
+        </textarea>
+        <table class="att-table">
+          <thead>
+            <tr>
+              <th>属性</th>
+              <th>默认值</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>data-layertype</td>
+              <td>importantMsg字符串</td>
+              <td>指定弹窗是importantMsg重要的信息类型</td>
+            </tr>
+            <tr>
+              <td>data-important-msg-type</td>
+              <td>1 字符串类型</td>
+              <td>1 成功 2提示 3warn 4error</td>
+            </tr>
+            <tr>
+              <td>data-important-msg</td>
+              <td>唱起来！ 字符串</td>
+              <td>设置主要标题内容</td>
+            </tr>
+            <tr>
+              <td>data-important-submsg</td>
+              <td>拉尔啦~拉尔啦~拉尔~拉尔啦！ 字符串</td>
+              <td>设置副标题内容</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>方式二：</h3>
+        <span class="importantMsg-demo1">点击我啊</span>
+        <script>
+        $(".importantMsg-demo1").on("click", function () {
+          prilayer.importantMsg({
+            importantMsg: "主标题啊~~~~",
+            importantMsgType: "2",
+            importantSubmsg: "副标题O(∩_∩)O哈哈哈~"
+          });
+        })
+        </script>
+        <textarea disabled="true" class="html-demo" rows="10">
+          <script>
+          $(".importantMsg-demo1").on("click", function () {
+            prilayer.importantMsg({
+              importantMsg: "主标题啊~~~~",
+              importantMsgType: "2",
+              importantSubmsg: "副标题O(∩_∩)O哈哈哈~"
+            });
+          })
+          </script>
+        </textarea>
+        <table class="att-table">
+          <thead>
+            <tr>
+              <th>属性</th>
+              <th>默认值</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>importantMsgType</td>
+              <td>1 字符串类型</td>
+              <td>1 成功 2提示 3warn 4error</td>
+            </tr>
+            <tr>
+              <td>importantMsg</td>
+              <td>唱起来！ 字符串</td>
+              <td>设置主要标题内容</td>
+            </tr>
+            <tr>
+              <td>importantSubmsg</td>
+              <td>拉尔啦~拉尔啦~拉尔~拉尔啦！ 字符串</td>
+              <td>设置副标题内容</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <script src="./layer/layer.js"></script>
+    <script src="./layer-based.js"></script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+html #layui_layer_skingewskinstylecss{display:none; position: absolute; width:1989px;}
+body .layer-ext-geyskin .layui-layer-title {
+	background-color: #ff7700;
+	border-top-radius:4px;
+	-moz-border-top-radius:4px;
+	-ms-border-top-radius:4px;
+	-o-border-top-radius:4px;
+	-webkit-border-top-radius:4px;
+	color:#ffffff;
+	height: 40px;
+	font-size:16px;
+}
+.layer-ext-geyskin .layui-layer-ico {
+	background:url(./layer_icon.png) no-repeat;
+}
+.layer-ext-geyskin .layui-layer-setwin .layui-layer-close1 {
+	background-position: 0px 0 ;
+	width:19px;
+	height:18px;
+}
+.layer-ext-geyskin .layui-layer-setwin .layui-layer-max {
+	background-position:0px -38px;
+	width:14px;
+	height: 14px;
+}
+.layer-ext-geyskin .layui-layer-setwin .layui-layer-max:hover {
+	background-position: -16px -38px;
+}
+.layer-ext-geyskin .layui-layer-setwin .layui-layer-max.layui-layer-maxmin{
+	background-position: -31px -38px;
+}
+.layer-ext-geyskin .layui-layer-setwin .layui-layer-max.layui-layer-maxmin:hover{
+	background-position: -48px -38px;
+}
+.layer-ext-geyskin .layui-layer-title .title-text {
+	display: inline-block;
+	font-size: 16px;
+	float: left;
+	margin:0px auto auto 0px;
+	color: #ffffff;
+}
+.layer-ext-geyskin .layui-layer-title .title-icon{
+	display: inline-block;
+	margin:12px 10px auto;
+	float: left;
+}
+.layer-ext-geyskin .layui-layer-title .title-icon0{
+	display: none;
+}
+/*title-icon1提示信息*/
+.layer-ext-geyskin .layui-layer-title .title-icon1{
+	width:24px;
+	height: 24px;
+	background-position: 0px -60px;
+}
+.layer-ext-geyskin .layui-layer-btn{
+	text-align: center;
+}
+.layer-ext-geyskin .line-group {
+	border-bottom: 1px solid #dddddd;
+}
+.layer-ext-geyskin .line-group .label{
+	color:#999999;
+	font-size: 14px;
+	border:none;
+}
+.layer-ext-geyskin .line-group .right-value {
+	display: inline-block;
+	color:#666666;
+}
+/*layer-import-msg-block*/
+.layer-import-msg-block {
+	padding: 70px 0px 100px 0px;
+}
+.layer-import-msg-block .main-msg .layer-icon {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.layer-import-msg-block .main-msg {
+	text-align: center;
+	font-size: 18px;
+}
+/* 绿色 成功 */
+.layer-import-msg-block .main-msg .layer-icon1 {
+	background: url(./layer_icon_01.png) no-repeat center center;
+}
+.layer-import-msg-block .main-msg1 {
+	color: #21ba74;
+}
+/* 蓝色 提示 */
+.layer-import-msg-block .main-msg .layer-icon2 {
+	background: url(./layer_icon_02.png) no-repeat center center;
+}
+/* 黄色 警告 */
+.layer-import-msg-block .main-msg .layer-icon3 {
+	background: url(./layer_icon_03.png) no-repeat center center;
+}
+/* 红色 失败 */
+.layer-import-msg-block .main-msg .layer-icon4 {
+	background: url(./layer_icon_04.png) no-repeat center center;
+}
+.layer-import-msg-block .submsg {
+	text-align: center;
+	color: #333333;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+/*msg*/
+.prilayer-msg.layui-layer-dialog .layui-layer-content .layui-layer-ico {
+	width: 34px;
+	height: 34px;
+}
+.prilayer-msg {
+	text-align: center;
+	min-width: 280px;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: none;
+}
+.prilayer-msg.layui-layer-dialog .layui-layer-padding {
+	padding: 18px 20px 18px 55px
+}
+.prilayer-msg .layui-layer-content {
+	font-size: 16px;
+	color: #333333;
+	display: inline-block;
+}
+.prilayer-msg-success {
+	border-color: #21ba74;
+}
+.prilayer-msg-error {
+	border-color: #fc560d;
+}
+.prilayer-msg-warn {
+	border-color: #ffb200;
+}
+.prilayer-msg-prompt {
+	border-color: #14b0ea;
+}
+.prilayer-msg-loading {
+	border-color: #d2d2d2;
+}
+.prilayer-msg.layui-layer-dialog .layui-layer-content .layui-layer-ico {
+	left: 5px;
+}
+.layer-ext-geyskin .layui-layer-ico1 {/*success*/
+	background: url(./layer_icon_01.png) no-repeat center center;
+}
+.layer-ext-geyskin .layui-layer-ico2 {/*error*/
+	background: url(./layer_icon_04.png) no-repeat center center;
+}
+.layer-ext-geyskin .layui-layer-ico9 {/*warn*/
+	background: url(./layer_icon_03.png) no-repeat center center;
+}
+.layer-ext-geyskin .layui-layer-ico7 {/*prompt*/
+	background: url(./layer_icon_02.png) no-repeat center center;
+}
+.layer-ext-geyskin .layui-layer-ico8 {/*loading*/
+	background: url(./layer_icon_05.gif) no-repeat center center;
+}
